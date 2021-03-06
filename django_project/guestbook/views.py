@@ -8,9 +8,9 @@ def index_view(request):
     form = SearchForm()
     if request.GET.get('author'):
         feedbacks = Feedback.objects.all().filter(
-            name__startswith=request.GET.get('author'))
+            author__startswith=request.GET.get('author'), status='active')
         return render(request, 'index.html', context={'feedbacks': feedbacks,
                                                       'form': form})
-    feedbacks = Feedback.objects.all()
+    feedbacks = Feedback.objects.all().filter(status='active')
     return render(request, 'index.html', context={'feedbacks': feedbacks,
                                                   'form': form})

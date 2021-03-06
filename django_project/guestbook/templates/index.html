@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Все отзывы{% endblock title %}
+
+
+{% block page_header %}Гостевая книга{% endblock page_header %}
+
+{% block content %}
+    <form action="{% url "feedback-list" %}" method="get">
+        <p><label for="{{ form.author.id_for_label }}">{{form.author.label}}</label></p>
+        <p>{{ form.author }}</p>
+        <p><input type="submit" value="Найти"></p>
+    </form>
+
+
+    {% if not feedbacks %}
+        <h2>НЕТ ОТЗЫВОВ</h2>
+    {% endif %}
+
+    {% for feedback in feedbacks %}
+        <div class="card">
+            <p class="author">{{ feedback.author }} ({{ feedback.email }})</p>
+            <p class="text">{{ feedback.text }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
