@@ -20,7 +20,14 @@
 
     {% for feedback in feedbacks %}
         <div class="card">
-            <p class="author">{{ feedback.author }} ({{ feedback.email }})</p>
+            <div class="blocks">
+                <p class="author">{{ feedback.author }} ({{ feedback.email }})</p>
+                <p>
+                    <a href="{% url "feedback-update" feedback.id %}"><i
+                            class="far fa-edit"></i></a>
+                    <a href=""><i class="fas fa-trash-alt"></i></a>
+                </p>
+            </div>
             <p class="text">{{ feedback.text }}</p>
         </div>
     {% endfor %}
