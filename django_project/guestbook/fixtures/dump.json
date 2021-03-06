@@ -1,0 +1,92 @@
+[
+{
+  "model": "guestbook.feedback",
+  "pk": 1,
+  "fields": {
+    "author": "Криштиану Роналду",
+    "email": "cr7@gmail.com",
+    "text": "Беш бармак мне очень понравился. Когда буду приезжать в Кыргызстан, буду здесь кушать.",
+    "created_at": "2021-03-06T05:39:30.410Z",
+    "updated_at": "2021-03-06T05:39:30.410Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guestbook.feedback",
+  "pk": 2,
+  "fields": {
+    "author": "Конор Макгрегор",
+    "email": "conor@mail.ru",
+    "text": "Теперь буду пить кымыз, вместо виски.",
+    "created_at": "2021-03-06T05:41:40.858Z",
+    "updated_at": "2021-03-06T05:41:40.858Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guestbook.feedback",
+  "pk": 3,
+  "fields": {
+    "author": "Дональд Трамп",
+    "email": "trump@gmail.com",
+    "text": "Хороший ресторан. Нужно такой же ресторан открыть в Вашингтоне.",
+    "created_at": "2021-03-06T05:42:34.000Z",
+    "updated_at": "2021-03-06T05:42:34.000Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guestbook.feedback",
+  "pk": 4,
+  "fields": {
+    "author": "Шакира",
+    "email": "shakira23131@gmal.com",
+    "text": "Певица в этом ресторане не очень поет. Надо в следующий раз показать, как надо петь.",
+    "created_at": "2021-03-06T05:44:15.506Z",
+    "updated_at": "2021-03-06T05:44:15.507Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guestbook.feedback",
+  "pk": 5,
+  "fields": {
+    "author": "Илон Маск",
+    "email": "tesla125@gmail.com",
+    "text": "Я бы работников заменил роботами, так можно было бы сэкономить на времени.",
+    "created_at": "2021-03-06T05:46:15.542Z",
+    "updated_at": "2021-03-06T05:46:15.542Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "guestbook.feedback",
+  "pk": 6,
+  "fields": {
+    "author": "Киану Ривз",
+    "email": "matrix1241@gmail.com",
+    "text": "Неплохой ресторан. Только здесь у вас никто на меня не нападает. Хотел бы я разнести это ресторан.",
+    "created_at": "2021-03-06T05:48:13.580Z",
+    "updated_at": "2021-03-06T05:48:13.580Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$OXcBSrjTAIKE$pmiwxRZzPvJijNLYfbNYkYcZQkJsQxL1YziEfKochqc=",
+    "last_login": "2021-03-06T05:37:48.546Z",
+    "is_superuser": true,
+    "username": "asman",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T05:35:53.813Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
