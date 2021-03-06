@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block menu %}<li><a href="{% url "feedback-add" %}">Создать отзыв</a></li
+>{% endblock menu %}
 
 {% block title %}Все отзывы{% endblock title %}
 
@@ -22,10 +24,11 @@
         <div class="card">
             <div class="blocks">
                 <p class="author">{{ feedback.author }} ({{ feedback.email }})</p>
-                <p>
+                <p class="panel">
                     <a href="{% url "feedback-update" feedback.id %}"><i
-                            class="far fa-edit"></i></a>
-                    <a href=""><i class="fas fa-trash-alt"></i></a>
+                            class="far fa-edit icon"></i></a>
+                    <a href="{% url "feedback-delete" feedback.id %}"><i
+                            class="fas fa-trash-alt icon"></i></a>
                 </p>
             </div>
             <p class="text">{{ feedback.text }}</p>

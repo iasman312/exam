@@ -8,10 +8,12 @@ def index_view(request):
     form = SearchForm()
     if request.GET.get('author'):
         feedbacks = Feedback.objects.all().filter(
-            author__startswith=request.GET.get('author'), status='active')
+            author__startswith=request.GET.get('author'),
+            status='active').order_by('created_at')
         return render(request, 'index.html', context={'feedbacks': feedbacks,
                                                       'form': form})
-    feedbacks = Feedback.objects.all().filter(status='active')
+    feedbacks = Feedback.objects.all().filter(status='active').order_by(
+        '-created_at')
     return render(request, 'index.html', context={'feedbacks': feedbacks,
                                                   'form': form})
 
@@ -55,3 +57,14 @@ def feedback_update_view(request, pk):
 
         return render(request, 'feedback_create.html',
                       context={'form': form, 'feedback': feedback})
+
+
+def feedback_delete_view(request, pk):
+    feedback = get_object_or_404(Feedback, id=pk)
+
+    if request.method == 'GET':
+        return render(request, 'feedback_delete.html', context={'feedback':
+                                                                   feedback})
+    elif request.method == 'POST':
+        feedback.delete()
+        return redirect('feedback-list')

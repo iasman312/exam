@@ -3,7 +3,7 @@
 {% block page_header %}Добавить отзыв{% endblock page_header %}
 
 {% block content %}
-    <form action="{% url "product-add" %}" method="post">
+    <form action="{% url "feedback-add" %}" method="post">
         {% include "feedback_form.html" with button_text="Создать отзыв" %}
     </form>
 {% endblock content %}
